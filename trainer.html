@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Gym</title>
+</head>
+<body>
+     
+    <div class="navbar">
+        <a href="#" class="logo"> F <b>A</b>.</a>
+        <div class="toggle" onclick="navToggle();">
+
+        </div>
+        <ol>
+            <li><a href="home.html" onclick="navToggle();">Home</a></li>
+            <li><a href="about.html" onclick="navToggle();">About</a></li>
+            <li><a href="workout.html" onclick="navToggle();">Workout</a></li>
+            <li><a href="trainer.html" onclick="navToggle();">Trainer</a></li>
+            <li><a href="diet.html" onclick="navToggle();">Diet</a></li>
+            <li><a href="register.php" onclick="navToggle();">Register</a></li>
+        </ol>
+    </div>
+
+     <!-- Trainer sectin  -->
+   <section  class="trainer view">
+    <div class="main">
+        <h2><span>B</span>est <span>T</span>rainers</h2>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, illum.</h6>
+    </div>
+    <div class="content" > 
+        <div class="frame">
+            <div class="box">
+                <img src="./image/trainer1.jpg" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">chris hamsone</div>
+                <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                </div>
+            </div>
+             <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            <a href="">Explore</a> -->
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/trainer2.jpg" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">sia johnas</div>
+                <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                </div>
+            </div>
+             <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            <a href="">Explore</a> -->
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/trainer3.jpg" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">justine biebar</div>
+                <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                </div>
+            </div>
+             <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            <a href="">Explore</a> -->
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/trainer4.jpg" alt="">
+            </div>
+            <div class="headline">
+                <div class="title">john maxwell</div>
+                <div class="icons">
+                    <i class="fa fa-facebook"></i>
+                    <i class="fa fa-instagram"></i>
+                    <i class="fa fa-twitter"></i>
+                </div>
+            </div>
+             <!-- <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+            <a href="">Explore</a> -->
+        </div>
+       
+    </div>
+   </section>
+
+    
+<!-- copy right -->
+
+<section class="copyright">
+    &copy;  copyright <a href="#">vpcsc-student</a> 2022 | All Right Reserved
+ </section>
+ 
+ <!-- javascript  -->
+ <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+ <script>
+     window.addEventListener('scroll',function(){
+         const navbar=document.querySelector('.navbar');
+         navbar.classList.toggle("sticky", window.scrollY > 50);
+       
+     });
+     const togglebar=document.querySelector('.toggle');
+     const menu=document.querySelector('ol');
+ 
+     function navToggle(){
+         togglebar.classList.toggle("active");
+         menu.classList.toggle("active");
+ 
+     };
+
+     let loadMoreBtn = document.querySelector('.workout .load-more .btn');
+let currentItem = 6;
+loadMoreBtn.onclick = () =>{
+  let boxes = [...document.querySelectorAll('.workout .content .frame')];
+  for(var i = currentItem; i < currentItem + 3; i++){
+    boxes[i].style.display = 'inline-block';
+  };
+  currentItem +=3;
+  if(currentItem >= boxes.length){
+    loadMoreBtn.style.display = 'none';
+  }
+}
+ </script>
+ 
+ </body>
+ </html>
+

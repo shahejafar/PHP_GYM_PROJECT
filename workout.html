@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Gym</title>
+</head>
+<body>
+     
+    <div class="navbar">
+        <a href="#" class="logo"> F <b>A</b>.</a>
+        <div class="toggle" onclick="navToggle();">
+
+        </div>
+        <ol>
+            <li><a href="home.html" onclick="navToggle();">Home</a></li>
+            <li><a href="about.html" onclick="navToggle();">About</a></li>
+            <li><a href="workout.html" onclick="navToggle();">Workout</a></li>
+            <li><a href="trainer.html" onclick="navToggle();">Trainer</a></li>
+            <li><a href="diet.html" onclick="navToggle();">Diet</a></li>
+            <li><a href="register.php" onclick="navToggle();">Register</a></li>
+        </ol>
+    </div>
+
+ <!-- work section  -->
+
+ <section class="workout view">
+    <div class="main">
+        <h2><span>W</span>orkout</h2>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, illum.</h6>
+
+    </div>
+    <div class="content">
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout1.jpg" alt="">
+            </div>
+            <div class="title">Trademil workout</div>
+            <p>it is a device generally for walking, running or climbing while staying in the same</p>
+
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout2.jpg" alt="">
+            </div>
+            <div class="title">Barbell workout</div>
+            <p>This workout is to check the strength of your back.</p>
+
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout3.jpg" alt="">
+            </div>
+            <div class="title">Weight Lifting</div>
+            <p>It helps you build the strenght and musscles and reduces your risk of chronic deseases and it can promote weight loss</p>
+
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout4.jpg" alt="">
+            </div>
+            <div class="title">Shoulder press</div>
+            <p>Strength in the core musscles such as your obliques transverse abdominal muscle, lower back and spinal stabilizers,when performing the exercise while standing</p>
+
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout5.jpg" alt="">
+            </div>
+            <div class="title">Battle Ropes </div>
+            <p>It helps for fitness training to increase full body strength and conditioning </p>
+
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout6.jpg" alt="">
+            </div>
+            <div class="title">Abs Wokout</div>
+            <p>Abs training are obeained used interchangebely to describle exercises exercisesthat target midsection of the body.</p>
+
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout7.jpg" alt="">
+            </div>
+            <div class="title">One arm swing</div>
+            <p>Increases demands on the shoulders stablising muscles.</p>
+
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout8.jpg" alt="">
+            </div>
+            <div class="title">Barbell biceps curl</div>
+            <p>The barbell curl targets your biceps brachii muscles as well as the barchialis. A muscle responsible for elbow flexion.</p>
+
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout9.jpg" alt="">
+            </div>
+            <div class="title">One arm dumbbell rows</div>
+            <p>A well exucuted one arm dumbbell row builds a strong back. It all strengthens your shoulders, upper arm and core.</p>
+
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout10.jpg" alt="">
+            </div>
+            <div class="title">Bicep workout</div>
+            <p>A proper biceps workout is key to buildings stronger arms and increasing your power to lift</p>
+
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout11.jpg" alt="">
+            </div>
+            <div class="title">Tricep workout</div>
+            <p>increasing tricep streingth brings stability to your shoulder and arms.</p>
+
+        </div>
+        <div class="frame">
+            <div class="box">
+                <img src="./image/workout.12.jpg" alt="">
+            </div>
+            <div class="title">Chest workout</div>
+        <p>increases muscle thickness. A recent study investigated the changes in muscle thickness and strength with high intensity bench press training  </p>
+
+        </div>
+    </div>
+    <div class="load-more"> <span class="btn">Load More</span></div>
+</section>
+
+<!-- copy right -->
+
+<section class="copyright">
+    &copy;  copyright <a href="#">vp-student</a> 2022 | All Right Reserved
+ </section>
+ 
+ <!-- javascript  -->
+ <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+ <script>
+     window.addEventListener('scroll',function(){
+         const navbar=document.querySelector('.navbar');
+         navbar.classList.toggle("sticky", window.scrollY > 50);
+       
+     });
+     const togglebar=document.querySelector('.toggle');
+     const menu=document.querySelector('ol');
+ 
+     function navToggle(){
+         togglebar.classList.toggle("active");
+         menu.classList.toggle("active");
+ 
+     };
+
+     let loadMoreBtn = document.querySelector('.workout .load-more .btn');
+let currentItem = 6;
+loadMoreBtn.onclick = () =>{
+  let boxes = [...document.querySelectorAll('.workout .content .frame')];
+  for(var i = currentItem; i < currentItem + 3; i++){
+    boxes[i].style.display = 'inline-block';
+  };
+  currentItem +=3;
+  if(currentItem >= boxes.length){
+    loadMoreBtn.style.display = 'none';
+  }
+}
+ </script>
+ 
+ </body>
+ </html>

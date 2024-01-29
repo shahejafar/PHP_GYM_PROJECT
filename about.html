@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Gym</title>
+</head>
+<body>
+     
+    <div class="navbar">
+        <a href="#" class="logo"> F <b>A</b>.</a>
+        <div class="toggle" onclick="navToggle();">
+
+        </div>
+        <ol>
+            <li><a href="home.html" onclick="navToggle();">Home</a></li>
+            <li><a href="about.html" onclick="navToggle();">About</a></li>
+            <li><a href="workout.html" onclick="navToggle();">Workout</a></li>
+            <li><a href="trainer.html" onclick="navToggle();">Trainer</a></li>
+            <li><a href="diet.html" onclick="navToggle();">Diet</a></li>
+            <li><a href="register.php" onclick="navToggle();">Register</a></li>
+        </ol>
+    </div>
+
+    <!-- about section  -->
+    <section  class="about view">
+        <div class="main">
+            <h2><span>A</span>bout Us</h2>
+            <h6>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, neque.</h6>
+
+        </div>
+        <div class="content">
+            <div class="cols">
+                <p><b>A</b>t THE GYM, our mission is to provide you with the ultimate fitness experience, one that focuses on your specific fitness needs, helps you achieve the results you are after and invigorates your soul. We guarantee the highest quality equipment and training programs available, an expert staff, special amenities that are often not found in other health clubs, attentive service and truly sophisticated surroundings. Our every Fitness training center is committed to being a unique Fitness training center in india.
+
+                   We believe in being different. Not merely for the sake of being dissimilar, but different by being the best in the fitness industry. <br><br><br> We set out with one simple and honest goal in mind; to be sensitive to our memberâ€™s needs and fitness requirements. Our ideology is to provide our members with the best fitness technologies and services that no others can provide. We listen, we are sensitive to your needs, and most importantly, we thus know what you, as a gym-goer, want.
+                   Welcome to THE GYM, the latest and modern fitness clubs in New Delhi India Located at Pitampura, Rajouri Garden, Patel Nagar, Vikas Puri, Janak Puri, Model Town, Dayanand Vihar, Punjabi Bagh, Malviya Nagar and Paschim Vihar.
+
+                   THE GYM is a fitness club brand that specializes on the prestigious market segment of business professionals and the working professionals. With our dedication in bringing you the latest fitness technologies, <br><br> THE GYM is equipped with many hi-tech equipment and state-of-the art fitness gadgets. Our professional personal trainers and trained helpers dedication will ensure that you receive the appropriate fitness program, customized to your fitness and health needs. We currently have the highest trainers to memberâ€™s ratio in our industry. Our members enjoy our private yet classy environment and this will ensure that you exercise in utmost privacy and luxury. At THE GYM, we proudly fuse fitness with fineness; because here, fitness is a privilege.</p>
+            </div>
+            <div class="cols">
+                <div class="box">
+                    <img src="./image/About.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+<!-- copy right -->
+
+<section class="copyright">
+    &copy;  copyright <a href="#">vp-student</a> 2022 | All Right Reserved
+ </section>
+ 
+ <!-- javascript  -->
+ <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+ <script>
+     window.addEventListener('scroll',function(){
+         const navbar=document.querySelector('.navbar');
+         navbar.classList.toggle("sticky", window.scrollY > 50);
+       
+     });
+     const togglebar=document.querySelector('.toggle');
+     const menu=document.querySelector('ol');
+ 
+     function navToggle(){
+         togglebar.classList.toggle("active");
+         menu.classList.toggle("active");
+ 
+     };
+
+     let loadMoreBtn = document.querySelector('.workout .load-more .btn');
+let currentItem = 6;
+loadMoreBtn.onclick = () =>{
+  let boxes = [...document.querySelectorAll('.workout .content .frame')];
+  for(var i = currentItem; i < currentItem + 3; i++){
+    boxes[i].style.display = 'inline-block';
+  };
+  currentItem +=3;
+  if(currentItem >= boxes.length){
+    loadMoreBtn.style.display = 'none';
+  }
+}
+ </script>
+ 
+ </body>
+ </html>
+

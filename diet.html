@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Gym</title>
+</head>
+<body>
+     
+    <div class="navbar">
+        <a href="#" class="logo"> F <b>A</b>.</a>
+        <div class="toggle" onclick="navToggle();">
+
+        </div>
+        <ol>
+            <li><a href="home.html" onclick="navToggle();">Home</a></li>
+            <li><a href="about.html" onclick="navToggle();">About</a></li>
+            <li><a href="workout.html" onclick="navToggle();">Workout</a></li>
+            <li><a href="trainer.html" onclick="navToggle();">Trainer</a></li>
+            <li><a href="diet.html" onclick="navToggle();">Diet</a></li>
+            <li><a href="register.php" onclick="navToggle();">Register</a></li>
+        </ol>
+    </div>
+
+     <!-- diet section  -->
+<section id="diet" class="diet view">
+    <div class="main">
+        <h2><span>S</span>pecial <span>D</span>iet</h2>
+        <h6>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, illum.</h6>
+
+    </div>
+    <div class="content">
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">boiled chicken</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam quibusdam sed facilis at, cumque nam eligendi cupiditate tempore ex non, totam incidunt dicta? Itaque nisi inventore at, temporibus sapiente, necessitatibus quae nobis nulla repellendus explicabo delectus consequuntur esse placeat.</p>
+
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="./image/diet1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">bread salads</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam quibusdam sed facilis at, cumque nam eligendi cupiditate tempore ex non, totam incidunt dicta? Itaque nisi inventore at, temporibus sapiente, necessitatibus quae nobis nulla repellendus explicabo delectus consequuntur esse placeat.</p>
+
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="./image/diet2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">dry fruits</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam quibusdam sed facilis at, cumque nam eligendi cupiditate tempore ex non, totam incidunt dicta? Itaque nisi inventore at, temporibus sapiente, necessitatibus quae nobis nulla repellendus explicabo delectus consequuntur esse placeat.</p>
+
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="./image/diet3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">healthy fruits</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam quibusdam sed facilis at, cumque nam eligendi cupiditate tempore ex non, totam incidunt dicta? Itaque nisi inventore at, temporibus sapiente, necessitatibus quae nobis nulla repellendus explicabo delectus consequuntur esse placeat.</p>
+
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="./image/diet4.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">fresh juices</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam quibusdam sed facilis at, cumque nam eligendi cupiditate tempore ex non, totam incidunt dicta? Itaque nisi inventore at, temporibus sapiente, necessitatibus quae nobis nulla repellendus explicabo delectus consequuntur esse placeat.</p>
+
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="./image/diet5.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cols a">
+                <div class="heading">some protein</div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus quisquam quibusdam sed facilis at, cumque nam eligendi cupiditate tempore ex non, totam incidunt dicta? Itaque nisi inventore at, temporibus sapiente, necessitatibus quae nobis nulla repellendus explicabo delectus consequuntur esse placeat.</p>
+
+            </div>
+            <div class="cols b">
+                <div class="boxes">
+                    <img src="./image/diet6.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+<!-- copy right -->
+
+<section class="copyright">
+    &copy;  copyright <a href="#">vp-student</a> 2022 | All Right Reserved
+ </section>
+ 
+ <!-- javascript  -->
+ <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+ <script>
+     window.addEventListener('scroll',function(){
+         const navbar=document.querySelector('.navbar');
+         navbar.classList.toggle("sticky", window.scrollY > 50);
+       
+     });
+     const togglebar=document.querySelector('.toggle');
+     const menu=document.querySelector('ol');
+ 
+     function navToggle(){
+         togglebar.classList.toggle("active");
+         menu.classList.toggle("active");
+ 
+     };
+
+     let loadMoreBtn = document.querySelector('.workout .load-more .btn');
+let currentItem = 6;
+loadMoreBtn.onclick = () =>{
+  let boxes = [...document.querySelectorAll('.workout .content .frame')];
+  for(var i = currentItem; i < currentItem + 3; i++){
+    boxes[i].style.display = 'inline-block';
+  };
+  currentItem +=3;
+  if(currentItem >= boxes.length){
+    loadMoreBtn.style.display = 'none';
+  }
+}
+ </script>
+ 
+ </body>
+ </html>
+
